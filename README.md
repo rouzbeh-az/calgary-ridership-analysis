@@ -13,13 +13,13 @@ This project analyzes Calgary Transit ridership trends over multiple years to un
 - **Calgary Transit Authority** → Optimize transit services and fare pricing.  
 - **City Planners** → Use data for future transit infrastructure improvements.  
 - **Commuters** → Understand long-term ridership trends.  
-
-### Data Sources  
+---
+## Data Sources  
 - **[Calgary Transit Ridership Data](https://data.calgary.ca/Transportation-Transit/Calgary-Transit-Ridership/iema-jbc4)**  
-
-### Establish Metrics  
+---
+## Establish Metrics  
 - **Monthly & Yearly Ridership Trends** (overall growth or decline)  
 - **Seasonal Variations** (summer vs. winter ridership patterns)  
 - **Fare Category Analysis** (U-Pass, Adult, Youth, Senior ridership trends)  
 - **Event-Based Ridership Impact** (if major events cause spikes in transit use)  
-
+---
