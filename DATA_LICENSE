@@ -1,0 +1,21 @@
+# Data Licensing Notice
+
+The data used in this project is sourced from the City of Calgary's Open Data Portal.
+
+## Data Source
+- **Calgary Transit Ridership Data**
+  - [Source](https://data.calgary.ca/Transportation-Transit/Calgary-Transit-Ridership/iema-jbc4)
+
+## Licensing Terms
+The data is provided under the **City of Calgary Open Data Terms of Use**, which grants a **worldwide, royalty-free, perpetual, non-exclusive license** to use the information, including for commercial purposes.
+
+More details can be found at:
+🔗 [City of Calgary Open Data Terms of Use](https://data.calgary.ca/stories/s/Open-Calgary-Terms-of-Use/u45n-7awa/)
+
+## Important Notes
+- This data is provided **as-is** without warranties.
+- The City of Calgary **retains ownership of the data**.
+- Users should **attribute the source** when sharing or publishing analysis based on this dataset.
+
+---
+⚠️ **Disclaimer:** This license only applies to the data used in this project. The project's code remains under the MIT License (see `LICENSE` file).
