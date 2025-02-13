@@ -14,8 +14,16 @@ This project analyzes Calgary Transit ridership trends over multiple years to un
 - **City Planners** → Use data for future transit infrastructure improvements.  
 - **Commuters** → Understand long-term ridership trends.  
 ---
-## Data Sources  
-- **[Calgary Transit Ridership Data](https://data.calgary.ca/Transportation-Transit/Calgary-Transit-Ridership/iema-jbc4)**  
+## Data Sources
+
+- **Name:** Calgary Transit Ridership Data  
+- **Source:** [City of Calgary Open Data Portal](https://data.calgary.ca/Transportation-Transit/Calgary-Transit-Ridership/iema-jbc4)  
+- **Format:** CSV
+- **Dataset Info**: Dataset contains **178 rows** and **27 columns**
+- **Timeframe:** Multi-year dataset with **monthly ridership counts**  
+- **Variables:** Year, Month, Ridership by fare type, Transit mode, Special passes  
+- **License:** Open Data Terms of Use ([See Terms](https://data.calgary.ca/stories/s/Open-Calgary-Terms-of-Use/u45n-7awa/))
+
 ---
 ## Establish Metrics  
 - **Monthly & Yearly Ridership Trends** (overall growth or decline)  
@@ -23,3 +31,27 @@ This project analyzes Calgary Transit ridership trends over multiple years to un
 - **Fare Category Analysis** (U-Pass, Adult, Youth, Senior ridership trends)  
 - **Event-Based Ridership Impact** (if major events cause spikes in transit use)  
 ---
+
+## Environment Setup
+To ensure a consistent development environment, we use **Conda** for dependency management.
+
+### **Creating the Conda Environment**
+```bash
+conda env create -f environment.yaml
+conda activate calgary-ridership
+```
+
+To verify installed packages and versions:
+```bash
+conda list
+```
+
+If new dependencies are added to `environment.yaml`, update your environment with:
+```bash
+conda env update --file environment.yaml --prune
+```
+
+If you need to delete the environment:
+```bash
+conda env remove --name calgary-ridership
+```
