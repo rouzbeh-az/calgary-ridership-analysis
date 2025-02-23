@@ -13,7 +13,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1] if "__file__" in globals() el
 DATA_PATH = PROJECT_ROOT / "data/raw/Calgary_Transit_Ridership.csv"
 
 # Output Paths
-REPORT_PATH = PROJECT_ROOT / "reports/data_validation_report.md"
+REPORT_PATH = PROJECT_ROOT / "reports/data_processing_report.md"
 PLOTS_PATH = PROJECT_ROOT / "visualizations/"
 
 def bar_plot(data: pd.Series, title: str, xlabel: str, ylabel: str, rotation: int = 0) -> None:
@@ -90,7 +90,7 @@ def generate_report(project_dataframe: pd.DataFrame, validation_df: pd.DataFrame
     validation_table = tabulate(validation_df, headers="keys", tablefmt="github", showindex=False)
 
     # Generate Markdown Report
-    markdown_report = f"""# Data Validation Report  
+    markdown_report = f"""# Data Processing Report  
 **Dataset:** {DATA_PATH.name}  
 **Total Rows:** {project_dataframe.shape[0]}  
 **Total Columns:** {project_dataframe.shape[1]}  
