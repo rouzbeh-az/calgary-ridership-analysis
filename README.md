@@ -48,10 +48,30 @@ conda list
 
 If new dependencies are added to `environment.yaml`, update your environment with:
 ```bash
-conda env update --file environment.yaml --prune
+conda env update --file environment.yaml
 ```
 
 If you need to delete the environment:
 ```bash
 conda env remove --name calgary-ridership
 ```
+
+## Processing Steps
+
+To ensure data integrity, a **cleaning process** was applied before analysis. The following steps were taken:
+
+1. **Handling Missing Values:**
+   - **`Airport BRT Ridership`** and **`Weekend Group Pass Ridership`** were **dropped** due to excessive missing data.
+   - Data from **2010-2014** was removed, reducing missing values significantly.
+   - Columns with **only one missing value** were **imputed** using the **mean ridership for the same month in previous years**.
+
+2. **Handling Zero Values:**
+   - **`U-Pass Ridership`** had **zero values** during the **COVID-19 pandemic** (due to university closures) and was **kept** to reflect real-world impacts.
+   - **`Youth Cash-Single Ticket Ride Ridership`** had **zero values in 2014**, but it was **ignored** due to minimal impact.
+
+3. **Handling Negative Values:**
+   - Since we **lack access to SMEs**, negative values cannot be confirmed.
+   - Only **two columns** had negative values (after removing the 2010-2014 years), and they contributed **minimally** to overall ridership.
+   - These columns were **dropped** from the dataset to maintain accuracy.  (**`Youth Day Pass Ridership`**, **`Youth Book of Tickets Ridership`**)
+
+For a **detailed breakdown of data validation and cleaning**, see the **[full report](reports\data_processing_report.md)**.
